@@ -9,10 +9,10 @@
       <div class="skill-category data-node">
         <div class="node-header">> SYS.LANGUAGES</div>
         <div class="tags">
-          <span>JavaScript[cite: 1]</span>
-          <span>Java[cite: 1]</span>
-          <span>C++[cite: 1]</span>
-          <span>Swift[cite: 1]</span>
+          <span>JavaScript</span>
+          <span>Java</span>
+          <span>C++</span>
+          <span>Swift</span>
           <span>SQL</span>
         </div>
       </div>
@@ -22,10 +22,10 @@
         <div class="node-header">> FRONTEND_ARCH</div>
         <div class="tags">
           <span>Vue.js</span>
-          <span>React.js[cite: 1]</span>
+          <span>React.js</span>
           <span>Pinia</span>
-          <span>SwiftUI / UIKit[cite: 1]</span>
-          <span>Tailwind CSS[cite: 1]</span>
+          <span>SwiftUI / UIKit</span>
+          <span>Tailwind CSS</span>
         </div>
       </div>
 
@@ -33,10 +33,10 @@
       <div class="skill-category data-node">
         <div class="node-header">> BACKEND_DB</div>
         <div class="tags">
-          <span>Node.js[cite: 1]</span>
-          <span>Express.js[cite: 1]</span>
+          <span>Node.js</span>
+          <span>Express.js</span>
           <span>Spring Boot</span>
-          <span>MongoDB[cite: 1]</span>
+          <span>MongoDB</span>
           <span>System Design</span>
         </div>
       </div>
@@ -47,7 +47,7 @@
           <span>Cypress</span>
           <span>Jest</span>
           <span>Mocha</span>
-          <span>Postman[cite: 1]</span>
+          <span>Postman</span>
         </div>
       </div>
     </div>

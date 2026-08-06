@@ -30,16 +30,16 @@
           <span class="sys-icon">▣</span>
           <span class="status-indicator">SYS.ARCHIVED</span>
         </div>
-        <h3>Attire Me Outfit Recommender[cite: 1]</h3>
+        <h3>Attire Me Outfit Recommender</h3>
         <div class="tech-tags">
-          <span>Swift[cite: 1]</span>
-          <span>Supabase[cite: 1]</span>
-          <span>Cloudinary[cite: 1]</span>
-          <span>iOS[cite: 1]</span>
+          <span>Swift</span>
+          <span>Supabase</span>
+          <span>Cloudinary</span>
+          <span>iOS</span>
         </div>
         <div class="card-divider"></div>
         <p class="description">
-          Developed an iOS app recommending outfits based on preferences and weather, driving a 30% engagement increase. Built a community feature increasing user retention by 50%.[cite: 1]
+          Developed an iOS app recommending outfits based on preferences and weather, driving a 30% engagement increase. Built a community feature increasing user retention by 50%.
         </p>
       </div>
 
@@ -49,16 +49,16 @@
           <span class="sys-icon">▣</span>
           <span class="status-indicator">SYS.ARCHIVED</span>
         </div>
-        <h3>BringIt Blinkit Clone[cite: 1]</h3>
+        <h3>BringIt Blinkit Clone</h3>
         <div class="tech-tags">
-          <span>React.js[cite: 1]</span>
-          <span>Node.js[cite: 1]</span>
-          <span>Express.js[cite: 1]</span>
-          <span>MongoDB[cite: 1]</span>
+          <span>React.js</span>
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>MongoDB</span>
         </div>
         <div class="card-divider"></div>
         <p class="description">
-          Built a full-stack grocery delivery application with JWT authentication, reducing unauthorized access by 80%. Designed dynamic product listings and efficient backend API endpoints.[cite: 1]
+          Built a full-stack grocery delivery application with JWT authentication, reducing unauthorized access by 80%. Designed dynamic product listings and efficient backend API endpoints.
         </p>
       </div>
     </div>

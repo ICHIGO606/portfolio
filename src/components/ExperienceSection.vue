@@ -31,15 +31,15 @@
         <div class="job-card glow-hover">
           <div class="job-header">
             <div class="title-group">
-              <h3>Infosys[cite: 1]</h3>
-              <span class="role">iOS Developer Intern[cite: 1]</span>
+              <h3>Infosys</h3>
+              <span class="role">iOS Developer Intern</span>
             </div>
-            <span class="badge">Feb 2025[cite: 1]</span>
+            <span class="badge">Feb 2025</span>
           </div>
           <div class="card-divider"></div>
           <ul class="task-list">
-            <li>Collaborated in a 10-member team to build scalable iOS applications using agile methodologies.[cite: 1]</li>
-            <li>Contributed to building UI components and integrating RESTful APIs in Swift.[cite: 1]</li>
+            <li>Collaborated in a 10-member team to build scalable iOS applications using agile methodologies.</li>
+            <li>Contributed to building UI components and integrating RESTful APIs in Swift.</li>
           </ul>
         </div>
       </div>

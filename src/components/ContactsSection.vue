@@ -1,163 +1,265 @@
 <template>
-  <section class="cyber-panel contact-panel">
-    <div class="panel-header">
-      <h2>// TRANSMISSION_PROTOCOLS: CONTACT</h2>
+  <section class="section-container">
+    <div class="section-header">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-description">Available for software engineering roles, discussions on systems design, or open-source collaboration.</p>
     </div>
-    
-    <div class="contact-container">
-      <p class="terminal-text">> SECURE CONNECTION ESTABLISHED. SELECT A CHANNEL TO INITIATE COMM_LINK:</p>
-      
-      <div class="action-grid">
-        <!-- Email -->
-        <a href="mailto:shivamdubey177@gmail.com" class="cyber-btn email-btn">
-          <span class="btn-icon">✉</span>
-          <span class="btn-text">INITIALIZE_EMAIL</span>
-          <span class="btn-glitch"></span>
-        </a>
+
+    <div class="contact-card">
+      <div class="card-message">
+        <h3 class="message-title">Let’s connect</h3>
+        <p class="message-text">
+          Whether you have an opening for a software engineer, questions about my projects, or want to discuss frontend architecture, feel free to drop an email or reach out on social channels.
+        </p>
+      </div>
+
+      <div class="contact-channels">
+        <!-- Email with Copy Action -->
+        <div class="channel-btn primary-channel email-card">
+          <a href="mailto:shivamdubey177@gmail.com" class="channel-link">
+            <svg class="channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <div class="channel-info">
+              <span class="channel-label">Email</span>
+              <span class="channel-value">shivamdubey177@gmail.com</span>
+            </div>
+          </a>
+          <button 
+            type="button" 
+            class="copy-btn" 
+            :class="{ copied }"
+            @click="copyEmail" 
+            :aria-label="copied ? 'Email copied' : 'Copy email to clipboard'"
+          >
+            <svg v-if="!copied" class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+            </svg>
+            <svg v-else class="copy-icon check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>{{ copied ? 'Copied' : 'Copy' }}</span>
+          </button>
+        </div>
 
         <!-- LinkedIn -->
-        <a href="https://linkedin.com/in/shivam-dubey-aa47571ba" target="_blank" rel="noopener noreferrer" class="cyber-btn linkedin-btn">
-          <span class="btn-icon">in</span>
-          <span class="btn-text">LINKEDIN_UPLINK</span>
-          <span class="btn-glitch"></span>
+        <a href="https://linkedin.com/in/shivam-dubey-aa47571ba" target="_blank" rel="noopener noreferrer" class="channel-btn">
+          <svg class="channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect width="4" height="12" x="2" y="9"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+          <div class="channel-info">
+            <span class="channel-label">LinkedIn</span>
+            <span class="channel-value">shivam-dubey-aa47571ba</span>
+          </div>
         </a>
 
         <!-- GitHub -->
-        <a href="https://github.com/ICHIGO606" target="_blank" rel="noopener noreferrer" class="cyber-btn github-btn">
-          <span class="btn-icon">&lt;/&gt;</span>
-          <span class="btn-text">GITHUB_DATABANK</span>
-          <span class="btn-glitch"></span>
+        <a href="https://github.com/ICHIGO606" target="_blank" rel="noopener noreferrer" class="channel-btn">
+          <svg class="channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+            <path d="M9 18c-4.51 2-5-2-7-2"/>
+          </svg>
+          <div class="channel-info">
+            <span class="channel-label">GitHub</span>
+            <span class="channel-value">github.com/ICHIGO606</span>
+          </div>
         </a>
       </div>
     </div>
   </section>
 </template>
 
+<script setup>
+import { ref } from 'vue'
+
+const copied = ref(false)
+
+const copyEmail = async () => {
+  try {
+    await navigator.clipboard.writeText('shivamdubey177@gmail.com')
+    copied.value = true
+    setTimeout(() => {
+      copied.value = false
+    }, 2000)
+  } catch (err) {
+    console.error('Failed to copy', err)
+  }
+}
+</script>
+
 <style scoped>
-.cyber-panel {
-  background: var(--panel-bg);
-  border-left: 4px solid var(--neon-cyan);
-  padding: 1.5rem;
-  margin: 2rem 0;
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.05);
-  position: relative;
+.section-container {
+  margin-bottom: 24px;
 }
 
-/* Background warning stripes effect */
-.contact-panel::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0; bottom: 0; width: 100%;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgba(176, 38, 255, 0.03) 10px,
-    rgba(176, 38, 255, 0.03) 20px
-  );
-  pointer-events: none;
-  z-index: 0;
+.section-header {
+  margin-bottom: 28px;
 }
 
-.panel-header h2 {
-  color: var(--neon-cyan);
-  margin-top: 0;
-  border-bottom: 1px solid #333;
-  padding-bottom: 0.8rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  z-index: 1;
+.section-title {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
 }
 
-.contact-container {
-  position: relative;
-  z-index: 1;
+.section-description {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
 }
 
-.terminal-text {
-  font-family: 'Courier New', Courier, monospace;
-  color: #aaa;
-  margin-bottom: 2rem;
-  font-size: 0.95rem;
+.contact-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.action-grid {
+.card-message {
+  max-width: 680px;
+}
+
+.message-title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.message-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.contact-channels {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
 }
 
-/* Cybernetic Button Base */
-.cyber-btn {
+.channel-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid #444;
-  padding: 1rem;
-  color: #fff;
-  text-decoration: none;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  letter-spacing: 1px;
-  position: relative;
+  gap: 14px;
+  background-color: var(--bg-surface-raised);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  transition: all 140ms var(--ease-standard);
+}
+
+.channel-btn:hover {
+  border-color: var(--border-hover);
+  background-color: var(--bg-surface-hover);
+  transform: translateY(-1px);
+}
+
+.primary-channel {
+  border-color: var(--accent-border);
+  background-color: var(--accent-muted);
+}
+
+.primary-channel:hover {
+  border-color: var(--accent);
+  background-color: rgba(56, 189, 248, 0.15);
+}
+
+.primary-channel .channel-icon {
+  color: var(--accent);
+}
+
+.channel-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.channel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.channel-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.channel-value {
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  white-space: nowrap;
   overflow: hidden;
-  transition: all 0.3s ease;
-  clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+  text-overflow: ellipsis;
 }
 
-.btn-icon {
-  font-size: 1.2rem;
-  font-weight: normal;
+.email-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 10px 18px;
 }
 
-/* Hover Effects */
-.cyber-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-  transform: translateY(-3px);
+.channel-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
 }
 
-.email-btn:hover {
-  border-color: var(--neon-cyan);
-  color: var(--neon-cyan);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3) inset;
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-family: var(--font-mono);
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 120ms var(--ease-standard);
+  flex-shrink: 0;
 }
 
-.linkedin-btn:hover {
-  border-color: #0077b5; /* LinkedIn Blue */
-  color: #0077b5;
-  box-shadow: 0 0 15px rgba(0, 119, 181, 0.3) inset;
+.copy-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
 }
 
-.github-btn:hover {
-  border-color: var(--neon-purple);
-  color: var(--neon-purple);
-  box-shadow: 0 0 15px rgba(176, 38, 255, 0.3) inset;
+.copy-btn.copied {
+  color: var(--success);
+  border-color: rgba(76, 195, 138, 0.4);
+  background-color: rgba(76, 195, 138, 0.08);
 }
 
-/* Hover Glitch Line Animation */
-.btn-glitch {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  transition: all 0.3s ease;
+.copy-icon {
+  width: 13px;
+  height: 13px;
 }
 
-.email-btn .btn-glitch { background: var(--neon-cyan); }
-.linkedin-btn .btn-glitch { background: #0077b5; }
-.github-btn .btn-glitch { background: var(--neon-purple); }
-
-.cyber-btn:hover .btn-glitch {
-  animation: scanline 0.8s linear infinite;
-}
-
-@keyframes scanline {
-  0% { top: 0; left: -100%; }
-  50% { top: 50%; left: 0; }
-  100% { top: 100%; left: 100%; }
+.check-icon {
+  color: var(--success);
 }
 </style>

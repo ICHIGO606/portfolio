@@ -1,53 +1,80 @@
 <template>
-  <section class="cyber-panel matrix-panel">
-    <div class="panel-header">
-      <h2>// CAPABILITIES_MATRIX</h2>
+  <section class="section-container">
+    <div class="section-header">
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-description">Core programming languages, application frameworks, and system tools.</p>
     </div>
-    
-    <div class="skills-container">
 
-      <div class="skill-category data-node">
-        <div class="node-header">> SYS.LANGUAGES</div>
-        <div class="tags">
-          <span>JavaScript</span>
-          <span>Java</span>
-          <span>C++</span>
-          <span>Swift</span>
-          <span>SQL</span>
+    <div class="skills-grid">
+      <!-- Languages -->
+      <div class="skill-category-card">
+        <div class="category-header">
+          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+          <h3 class="category-title">Languages</h3>
+        </div>
+        <div class="tag-cloud">
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Swift</span>
+          <span class="skill-tag">SQL</span>
         </div>
       </div>
-      
 
-      <div class="skill-category data-node">
-        <div class="node-header">> FRONTEND_ARCH</div>
-        <div class="tags">
-          <span>Vue.js</span>
-          <span>React.js</span>
-          <span>Pinia</span>
-          <span>SwiftUI / UIKit</span>
-          <span>Tailwind CSS</span>
+      <!-- Frontend Architecture -->
+      <div class="skill-category-card">
+        <div class="category-header">
+          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect width="18" height="18" x="3" y="3" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+          <h3 class="category-title">Frontend Architecture</h3>
+        </div>
+        <div class="tag-cloud">
+          <span class="skill-tag">Vue.js</span>
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">Pinia</span>
+          <span class="skill-tag">SwiftUI / UIKit</span>
+          <span class="skill-tag">Tailwind CSS</span>
         </div>
       </div>
 
       <!-- Backend & Databases -->
-      <div class="skill-category data-node">
-        <div class="node-header">> BACKEND_DB</div>
-        <div class="tags">
-          <span>Node.js</span>
-          <span>Express.js</span>
-          <span>Spring Boot</span>
-          <span>MongoDB</span>
-          <span>System Design</span>
+      <div class="skill-category-card">
+        <div class="category-header">
+          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>
+          </svg>
+          <h3 class="category-title">Backend & Systems</h3>
+        </div>
+        <div class="tag-cloud">
+          <span class="skill-tag">Spring Boot</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">System Design</span>
         </div>
       </div>
 
-      <div class="skill-category data-node">
-        <div class="node-header">> TOOLS_TESTING</div>
-        <div class="tags">
-          <span>Cypress</span>
-          <span>Jest</span>
-          <span>Mocha</span>
-          <span>Postman</span>
+      <!-- Testing & Tools -->
+      <div class="skill-category-card">
+        <div class="category-header">
+          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+          <h3 class="category-title">Testing & DevOps</h3>
+        </div>
+        <div class="tag-cloud">
+          <span class="skill-tag">Cypress</span>
+          <span class="skill-tag">Jest</span>
+          <span class="skill-tag">Mocha</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">Git / CI Pipelines</span>
         </div>
       </div>
     </div>
@@ -55,103 +82,95 @@
 </template>
 
 <style scoped>
-.cyber-panel {
-  background: var(--panel-bg);
-  border-left: 4px solid var(--neon-purple);
-  padding: 1.5rem;
-  margin: 2rem 0;
-  box-shadow: 0 0 15px rgba(176, 38, 255, 0.05);
+.section-container {
+  margin-bottom: 56px;
 }
 
-.panel-header h2 {
-  color: var(--neon-cyan);
-  margin-top: 0;
-  border-bottom: 1px solid #333;
-  padding-bottom: 0.8rem;
-  margin-bottom: 2rem;
+.section-header {
+  margin-bottom: 28px;
 }
 
-.skills-container {
+.section-title {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+}
+
+.section-description {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-/* Data Node Styling */
-.data-node {
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid #222;
-  padding: 1.5rem;
-  position: relative;
-  transition: all 0.3s ease;
+.skill-category-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  transition: border-color 140ms var(--ease-standard);
 }
 
-/* Glowing Corner Brackets */
-.data-node::before, .data-node::after {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease;
+.skill-category-card:hover {
+  border-color: var(--border-hover);
 }
 
-.data-node::before {
-  top: -1px;
-  left: -1px;
-  border-top-color: var(--neon-purple);
-  border-left-color: var(--neon-purple);
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-hairline);
 }
 
-.data-node::after {
-  bottom: -1px;
-  right: -1px;
-  border-bottom-color: var(--neon-purple);
-  border-right-color: var(--neon-purple);
+.category-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
-.data-node:hover {
-  background: rgba(176, 38, 255, 0.05);
-  border-color: rgba(176, 38, 255, 0.3);
+.category-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
-.data-node:hover::before, .data-node:hover::after {
-  border-color: var(--neon-cyan);
-}
-
-.node-header {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.95rem;
-  color: var(--neon-cyan);
-  border-bottom: 1px dashed #444;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-}
-
-/* Hex-style Tags */
-.tags {
+.tag-cloud {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 8px;
 }
 
-.tags span {
-  background: transparent;
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  color: #ddd;
-  padding: 5px 12px;
-  font-size: 0.85rem;
-  position: relative;
-  transition: all 0.2s ease;
-  cursor: default;
+.skill-tag {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  background-color: var(--bg-surface-raised);
+  border: 1px solid var(--border-hairline);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  transition: all 120ms var(--ease-standard);
 }
 
-.tags span:hover {
-  background: rgba(0, 240, 255, 0.1);
-  color: #fff;
-  border-color: var(--neon-cyan);
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
-  transform: translateY(-2px);
+.skill-tag:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

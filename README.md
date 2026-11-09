@@ -1,38 +1,32 @@
-# portfolio
+# Shivam Dubey — Engineering Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern, high-craft engineering portfolio built with Vue 3 and Vite, redesigned following the **unslop** design system principles.
 
-## Recommended IDE Setup
+## Tech Stack
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Framework:** Vue 3 (Composition API, `<script setup>`)
+- **Bundler:** Vite
+- **Typography:** Inter (Interface) & JetBrains Mono (Telemetry, Stats, Code)
+- **Palette:** Ink Dark Ramp with quiet hairlines and sky-cyan precision accent
 
-## Recommended Browser Setup
+## Featured Sections
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **About & Core Competencies:** Asymmetric split layout with verified academic metrics and an engineering focus overview.
+- **Experience:** Clean timeline highlighting frontend development at Lumen Technologies and mobile engineering at Infosys.
+- **Fight Hub (MMA Analytics):** Featured interactive telemetry console displaying round-by-round striking output and accuracy comparisons.
+- **Engineering Projects:** Smart Stay (Lodging & Booking Platform), Attire Me (iOS / Swift), and BringIt (Full-Stack Quick-Commerce).
+- **Skills Matrix:** Categorized architecture, systems, language, and testing proficiencies.
+- **Direct Channels:** Direct email, LinkedIn, and GitHub links.
 
-## Customize configuration
+## Development
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
+# Install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Start local development server
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
+# Build for production
 npm run build
 ```

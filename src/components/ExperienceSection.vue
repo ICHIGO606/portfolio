@@ -1,46 +1,69 @@
 <template>
-  <section class="cyber-panel timeline-panel">
-    <div class="panel-header">
-      <h2>// EXECUTION_LOG: EXPERIENCE</h2>
+  <section class="section-container">
+    <div class="section-header">
+      <h2 class="section-title">Experience</h2>
+      <p class="section-description">Practical engineering experience building production web and mobile software.</p>
     </div>
-    
-    <div class="timeline-container">
+
+    <div class="timeline">
       <!-- Lumen Technologies -->
-      <div class="timeline-item">
-        <div class="timeline-marker pulse"></div>
-        <div class="job-card glow-hover">
-          <div class="job-header">
-            <div class="title-group">
-              <h3>Lumen Technologies India</h3>
-              <span class="role">Frontend Intern</span>
+      <div class="timeline-entry">
+        <div class="timeline-track">
+          <div class="timeline-dot current-dot"></div>
+          <div class="timeline-line"></div>
+        </div>
+
+        <div class="experience-card">
+          <div class="card-top">
+            <div class="role-group">
+              <h3 class="role-title">Intern</h3>
+              <span class="company-name">Lumen Technologies India</span>
             </div>
-            <span class="badge active-badge">Ongoing - Aug 2024</span>
+            <span class="period-badge current-badge">Feb 2026 – Present</span>
           </div>
-          <div class="card-divider"></div>
-          <ul class="task-list">
-            <li>Engineered frontend interfaces utilizing Vue.js and the organization's proprietary CSS framework.</li>
-            <li>Implemented robust software testing pipelines utilizing Cypress, Jest, and Mocha.</li>
-            <li>Executed remediation protocols for GitHub security findings, ensuring high code integrity and system security.</li>
+
+          <ul class="duties-list">
+            <li>Engineered modern, responsive frontend user interfaces using Vue.js and company-standard design systems.</li>
+            <li>Implemented automated testing pipelines using Cypress, Jest, and Mocha to maintain high code reliability.</li>
+            <li>Executed remediation workflows for security and dependency audit findings across core frontend repositories.</li>
           </ul>
+
+          <div class="exp-tech-tags">
+            <span class="tag">Vue.js</span>
+            <span class="tag">Cypress</span>
+            <span class="tag">Jest</span>
+            <span class="tag">Mocha</span>
+            <span class="tag">Design Systems</span>
+          </div>
         </div>
       </div>
 
       <!-- Infosys -->
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="job-card glow-hover">
-          <div class="job-header">
-            <div class="title-group">
-              <h3>Infosys</h3>
-              <span class="role">iOS Developer Intern</span>
+      <div class="timeline-entry">
+        <div class="timeline-track">
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="experience-card">
+          <div class="card-top">
+            <div class="role-group">
+              <h3 class="role-title">iOS Developer Intern</h3>
+              <span class="company-name">Infosys</span>
             </div>
-            <span class="badge">Feb 2025</span>
+            <span class="period-badge">Feb 2025</span>
           </div>
-          <div class="card-divider"></div>
-          <ul class="task-list">
-            <li>Collaborated in a 10-member team to build scalable iOS applications using agile methodologies.</li>
-            <li>Contributed to building UI components and integrating RESTful APIs in Swift.</li>
+
+          <ul class="duties-list">
+            <li>Collaborated in an agile team of 10 engineers to build modular iOS features and responsive user interfaces.</li>
+            <li>Integrated Swift UI components with RESTful backend services, handling JSON data parsing and state updates.</li>
           </ul>
+
+          <div class="exp-tech-tags">
+            <span class="tag">Swift</span>
+            <span class="tag">iOS</span>
+            <span class="tag">RESTful APIs</span>
+            <span class="tag">Agile / Scrum</span>
+          </div>
         </div>
       </div>
     </div>
@@ -48,151 +71,147 @@
 </template>
 
 <style scoped>
-.cyber-panel {
-  background: var(--panel-bg);
-  border-left: 4px solid var(--neon-purple);
-  padding: 1.5rem;
-  margin: 2rem 0;
-  box-shadow: 0 0 15px rgba(176, 38, 255, 0.05);
+.section-container {
+  margin-bottom: 56px;
 }
 
-.panel-header h2 {
-  color: var(--neon-cyan);
-  margin-top: 0;
-  border-bottom: 1px solid #333;
-  padding-bottom: 0.8rem;
-  margin-bottom: 2rem;
+.section-header {
+  margin-bottom: 28px;
+}
+
+.section-title {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+}
+
+.section-description {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
 }
 
 /* Timeline Layout */
-.timeline-container {
-  position: relative;
-  margin-left: 1rem;
-  padding-left: 2rem;
-  border-left: 2px dashed rgba(0, 240, 255, 0.3);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 2.5rem;
-}
-
-.timeline-item:last-child {
-  margin-bottom: 0;
-}
-
-/* Glowing Nodes */
-.timeline-marker {
-  position: absolute;
-  left: -2.45rem;
-  top: 1.2rem;
-  width: 12px;
-  height: 12px;
-  background-color: var(--dark-bg);
-  border: 2px solid var(--neon-cyan);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--neon-cyan);
-  z-index: 2;
-}
-
-.pulse {
-  animation: pulse-glow 2s infinite;
-  background-color: var(--neon-cyan);
-}
-
-@keyframes pulse-glow {
-  0% { box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(0, 240, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(0, 240, 255, 0); }
-}
-
-/* Job Cards & Hover Effects */
-.job-card {
-  padding: 1.5rem;
-  border: 1px solid rgba(176, 38, 255, 0.3);
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 4px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.job-card::before {
-  content: '';
-  position: absolute;
-  top: 1.5rem;
-  left: -1rem;
-  border-width: 8px 10px 8px 0;
-  border-style: solid;
-  border-color: transparent rgba(176, 38, 255, 0.3) transparent transparent;
-  transition: border-color 0.3s ease;
-}
-
-.glow-hover:hover {
-  border-color: var(--neon-purple);
-  box-shadow: 0 0 20px rgba(176, 38, 255, 0.15) inset, 0 5px 15px rgba(0, 0, 0, 0.5);
-  transform: translateX(5px);
-}
-
-.glow-hover:hover::before {
-  border-color: transparent var(--neon-purple) transparent transparent;
-}
-
-/* Typography & Alignment */
-.job-header {
+.timeline {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.timeline-entry {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.timeline-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16px;
+  flex-shrink: 0;
+}
+
+.timeline-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--bg-surface-raised);
+  border: 2px solid var(--text-muted);
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.timeline-dot.current-dot {
+  border-color: var(--success);
+  background-color: var(--success);
+}
+
+.timeline-line {
+  width: 1px;
+  flex: 1;
+  background-color: var(--border-hairline);
+  margin: 6px 0;
+}
+
+/* Experience Card */
+.experience-card {
+  flex: 1;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  transition: border-color 140ms var(--ease-standard);
+}
+
+.experience-card:hover {
+  border-color: var(--border-hover);
+}
+
+.card-top {
+  display: flex;
   align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 
-.title-group h3 {
-  margin: 0 0 0.3rem 0;
-  color: #fff;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
+.role-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.role {
-  color: var(--neon-purple);
-  font-size: 0.95rem;
-  font-weight: bold;
-}
-
-.badge {
-  background: rgba(0, 240, 255, 0.05);
-  color: #aaa;
-  padding: 5px 10px;
-  border: 1px solid #444;
-  font-size: 0.85rem;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-.active-badge {
-  color: var(--neon-cyan);
-  border-color: var(--neon-cyan);
-  box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
-}
-
-.card-divider {
-  height: 1px;
-  background: linear-gradient(90deg, rgba(176, 38, 255, 0.5), transparent);
-  margin: 1.2rem 0;
-}
-
-.task-list {
+.role-title {
   margin: 0;
-  padding-left: 1.2rem;
-  color: #ccc;
-  line-height: 1.6;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
-.task-list li {
-  margin-bottom: 0.8rem;
+.company-name {
+  font-size: 13px;
+  color: var(--text-secondary);
 }
 
-.task-list li::marker {
-  color: var(--neon-cyan);
-  content: "» ";
+.period-badge {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  background-color: var(--bg-surface-raised);
+  border: 1px solid var(--border-hairline);
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.current-badge {
+  color: var(--text-primary);
+  border-color: rgba(76, 195, 138, 0.3);
+  background-color: rgba(76, 195, 138, 0.08);
+}
+
+/* Duties list */
+.duties-list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.duties-list li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.duties-list li::marker {
+  color: var(--text-muted);
 }
 </style>
